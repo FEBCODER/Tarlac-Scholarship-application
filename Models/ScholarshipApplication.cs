@@ -5,6 +5,8 @@ namespace scholarship_Application.Models
 {
     public class ScholarshipApplication
     {
+        [Browsable(false)]
+        public int Id { get; set; }
         public string StudentNumber { get; set; } = "";
         public string FullName { get; set; } = "";
 

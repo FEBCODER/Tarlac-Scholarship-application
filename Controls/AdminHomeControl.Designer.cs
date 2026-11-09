@@ -42,6 +42,9 @@
             pnlCardApproved.SuspendLayout();
             pnlCardRejected.SuspendLayout();
             SuspendLayout();
+            // 
+            // lblHeading
+            // 
             lblHeading.AutoSize = true;
             lblHeading.Dock = DockStyle.Top;
             lblHeading.Font = new Font("Segoe UI Semibold", 13F);
@@ -52,6 +55,9 @@
             lblHeading.Size = new Size(107, 34);
             lblHeading.TabIndex = 0;
             lblHeading.Text = "Overview";
+            // 
+            // pnlCards
+            // 
             pnlCards.ColumnCount = 4;
             pnlCards.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
             pnlCards.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 25F));
@@ -70,6 +76,9 @@
             pnlCards.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
             pnlCards.Size = new Size(700, 93);
             pnlCards.TabIndex = 1;
+            // 
+            // pnlCardTotal
+            // 
             pnlCardTotal.BackColor = Color.White;
             pnlCardTotal.Controls.Add(lblTotalValue);
             pnlCardTotal.Controls.Add(lblTotalCaption);
@@ -80,6 +89,9 @@
             pnlCardTotal.Name = "pnlCardTotal";
             pnlCardTotal.Size = new Size(164, 87);
             pnlCardTotal.TabIndex = 0;
+            // 
+            // lblTotalValue
+            // 
             lblTotalValue.Dock = DockStyle.Fill;
             lblTotalValue.Font = new Font("Segoe UI", 18F, FontStyle.Bold);
             lblTotalValue.ForeColor = Color.FromArgb(24, 41, 74);
@@ -90,6 +102,9 @@
             lblTotalValue.TabIndex = 0;
             lblTotalValue.Text = "0";
             lblTotalValue.TextAlign = ContentAlignment.MiddleLeft;
+            // 
+            // lblTotalCaption
+            // 
             lblTotalCaption.Dock = DockStyle.Top;
             lblTotalCaption.Font = new Font("Segoe UI", 9F);
             lblTotalCaption.ForeColor = Color.FromArgb(105, 115, 130);
@@ -99,12 +114,18 @@
             lblTotalCaption.Size = new Size(164, 21);
             lblTotalCaption.TabIndex = 1;
             lblTotalCaption.Text = "Total applications";
+            // 
+            // lblStripeTotal
+            // 
             lblStripeTotal.BackColor = Color.FromArgb(24, 41, 74);
             lblStripeTotal.Dock = DockStyle.Top;
             lblStripeTotal.Location = new Point(0, 0);
             lblStripeTotal.Name = "lblStripeTotal";
             lblStripeTotal.Size = new Size(164, 4);
             lblStripeTotal.TabIndex = 2;
+            // 
+            // pnlCardSubmitted
+            // 
             pnlCardSubmitted.BackColor = Color.White;
             pnlCardSubmitted.Controls.Add(lblSubmittedValue);
             pnlCardSubmitted.Controls.Add(lblSubmittedCaption);
@@ -115,6 +136,9 @@
             pnlCardSubmitted.Name = "pnlCardSubmitted";
             pnlCardSubmitted.Size = new Size(164, 87);
             pnlCardSubmitted.TabIndex = 1;
+            // 
+            // lblSubmittedValue
+            // 
             lblSubmittedValue.Dock = DockStyle.Fill;
             lblSubmittedValue.Font = new Font("Segoe UI", 18F, FontStyle.Bold);
             lblSubmittedValue.ForeColor = Color.FromArgb(23, 93, 186);
@@ -125,6 +149,9 @@
             lblSubmittedValue.TabIndex = 0;
             lblSubmittedValue.Text = "0";
             lblSubmittedValue.TextAlign = ContentAlignment.MiddleLeft;
+            // 
+            // lblSubmittedCaption
+            // 
             lblSubmittedCaption.Dock = DockStyle.Top;
             lblSubmittedCaption.Font = new Font("Segoe UI", 9F);
             lblSubmittedCaption.ForeColor = Color.FromArgb(105, 115, 130);
@@ -134,12 +161,18 @@
             lblSubmittedCaption.Size = new Size(164, 21);
             lblSubmittedCaption.TabIndex = 1;
             lblSubmittedCaption.Text = "Waiting for decision";
+            // 
+            // lblStripeSubmitted
+            // 
             lblStripeSubmitted.BackColor = Color.FromArgb(23, 93, 186);
             lblStripeSubmitted.Dock = DockStyle.Top;
             lblStripeSubmitted.Location = new Point(0, 0);
             lblStripeSubmitted.Name = "lblStripeSubmitted";
             lblStripeSubmitted.Size = new Size(164, 4);
             lblStripeSubmitted.TabIndex = 2;
+            // 
+            // pnlCardApproved
+            // 
             pnlCardApproved.BackColor = Color.White;
             pnlCardApproved.Controls.Add(lblApprovedValue);
             pnlCardApproved.Controls.Add(lblApprovedCaption);
@@ -150,6 +183,9 @@
             pnlCardApproved.Name = "pnlCardApproved";
             pnlCardApproved.Size = new Size(164, 87);
             pnlCardApproved.TabIndex = 2;
+            // 
+            // lblApprovedValue
+            // 
             lblApprovedValue.Dock = DockStyle.Fill;
             lblApprovedValue.Font = new Font("Segoe UI", 18F, FontStyle.Bold);
             lblApprovedValue.ForeColor = Color.FromArgb(28, 132, 74);
@@ -160,6 +196,9 @@
             lblApprovedValue.TabIndex = 0;
             lblApprovedValue.Text = "0";
             lblApprovedValue.TextAlign = ContentAlignment.MiddleLeft;
+            // 
+            // lblApprovedCaption
+            // 
             lblApprovedCaption.Dock = DockStyle.Top;
             lblApprovedCaption.Font = new Font("Segoe UI", 9F);
             lblApprovedCaption.ForeColor = Color.FromArgb(105, 115, 130);
@@ -169,12 +208,18 @@
             lblApprovedCaption.Size = new Size(164, 21);
             lblApprovedCaption.TabIndex = 1;
             lblApprovedCaption.Text = "Approved";
+            // 
+            // lblStripeApproved
+            // 
             lblStripeApproved.BackColor = Color.FromArgb(28, 132, 74);
             lblStripeApproved.Dock = DockStyle.Top;
             lblStripeApproved.Location = new Point(0, 0);
             lblStripeApproved.Name = "lblStripeApproved";
             lblStripeApproved.Size = new Size(164, 4);
             lblStripeApproved.TabIndex = 2;
+            // 
+            // pnlCardRejected
+            // 
             pnlCardRejected.BackColor = Color.White;
             pnlCardRejected.Controls.Add(lblRejectedValue);
             pnlCardRejected.Controls.Add(lblRejectedCaption);
@@ -185,6 +230,9 @@
             pnlCardRejected.Name = "pnlCardRejected";
             pnlCardRejected.Size = new Size(165, 87);
             pnlCardRejected.TabIndex = 3;
+            // 
+            // lblRejectedValue
+            // 
             lblRejectedValue.Dock = DockStyle.Fill;
             lblRejectedValue.Font = new Font("Segoe UI", 18F, FontStyle.Bold);
             lblRejectedValue.ForeColor = Color.FromArgb(199, 56, 56);
@@ -195,6 +243,9 @@
             lblRejectedValue.TabIndex = 0;
             lblRejectedValue.Text = "0";
             lblRejectedValue.TextAlign = ContentAlignment.MiddleLeft;
+            // 
+            // lblRejectedCaption
+            // 
             lblRejectedCaption.Dock = DockStyle.Top;
             lblRejectedCaption.Font = new Font("Segoe UI", 9F);
             lblRejectedCaption.ForeColor = Color.FromArgb(105, 115, 130);
@@ -204,12 +255,18 @@
             lblRejectedCaption.Size = new Size(165, 21);
             lblRejectedCaption.TabIndex = 1;
             lblRejectedCaption.Text = "Rejected";
+            // 
+            // lblStripeRejected
+            // 
             lblStripeRejected.BackColor = Color.FromArgb(199, 56, 56);
             lblStripeRejected.Dock = DockStyle.Top;
             lblStripeRejected.Location = new Point(0, 0);
             lblStripeRejected.Name = "lblStripeRejected";
             lblStripeRejected.Size = new Size(165, 4);
             lblStripeRejected.TabIndex = 2;
+            // 
+            // lblRecentTitle
+            // 
             lblRecentTitle.AutoSize = true;
             lblRecentTitle.Dock = DockStyle.Top;
             lblRecentTitle.Font = new Font("Segoe UI Semibold", 10.5F);
@@ -220,6 +277,9 @@
             lblRecentTitle.Size = new Size(148, 33);
             lblRecentTitle.TabIndex = 2;
             lblRecentTitle.Text = "Recent applications";
+            // 
+            // lstRecent
+            // 
             lstRecent.BorderStyle = BorderStyle.None;
             lstRecent.Dock = DockStyle.Fill;
             lstRecent.Font = new Font("Segoe UI", 9.5F);
@@ -229,6 +289,9 @@
             lstRecent.Name = "lstRecent";
             lstRecent.Size = new Size(700, 260);
             lstRecent.TabIndex = 3;
+            // 
+            // AdminHomeControl
+            // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(243, 245, 249);

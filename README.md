@@ -1,14 +1,15 @@
 # Tarlac City Scholarship Application (prototype)
 
-A Windows desktop prototype for the City Government of Tarlac scholarship
-application workflow. Frontend only: navigation, forms, and demo data.
-No database and no backend. Everything is in-memory and disappears when
-the app closes.
+A Windows desktop application for the City Government of Tarlac scholarship
+application workflow. WinForms frontend with a SQL Server LocalDB database
+(real login accounts, persistent applications and photos). Demo accounts and
+sample applications are seeded automatically on first run.
 
 ## Tech
 
 - C# / .NET 10, Windows Forms
-- Visual Studio 2026 (or any IDE with the .NET 10 SDK)
+- Microsoft.Data.SqlClient against SQL Server LocalDB ((localdb)\MSSQLLocalDB)
+- Database: `TarlacScholarship` (created automatically on first start)
 
 ## How to run
 
@@ -19,10 +20,14 @@ dotnet build "scholarship Application.csproj"
 dotnet run
 ```
 
-## Logging in (prototype only)
+SQL Server LocalDB must be present (Visual Studio installs it by default).
 
-- Type any username to enter the student dashboard.
-- A username starting with `admin` (any password) enters the admin dashboard.
+## Logins (seeded on first run)
+
+| Username | Password    | Role   |
+|----------|-------------|--------|
+| admin    | admin123    | Admin  |
+| ana      | student123  | Student |
 
 ## What works
 
@@ -31,12 +36,12 @@ dotnet run
 - Admin dashboard: overview, application review with status decisions
   (Approve / Under Review / Reject), activity log, creating new application
   records including a photo
-- Shared demo data lives in `SampleData.cs` for the current session only
+- Real login accounts read from the database (PBKDF2-hashed passwords)
+- Data persistence in SQL Server LocalDB, created and seeded automatically
 
 ## What is left (ideas)
 
-- Persist data (JSON file or database)
-- Real login/auth
+- Registration page for new students
 - Eligibility evaluation rules
 - Reporting and export
 
@@ -45,5 +50,5 @@ dotnet run
 - `Forms/` - windows: login, dashboards, admin application dialog
   (each has a `.Designer.cs` so it opens in the VS Forms Designer)
 - `Controls/` - screens hosted inside the dashboards, shared styling (`Ui.cs`)
+- `Data/` - database helper, repository (all SQL), password hashing, session
 - `Models/` - the `ScholarshipApplication` record used by all screens
-- `SampleData.cs` - demo rows shown at startup

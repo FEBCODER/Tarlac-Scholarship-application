@@ -1,4 +1,5 @@
 using System.Windows.Forms;
+using scholarship_Application.Data;
 using scholarship_Application.Models;
 
 namespace scholarship_Application.Controls
@@ -12,7 +13,7 @@ namespace scholarship_Application.Controls
 
         public void RefreshData()
         {
-            var applications = SampleData.Applications;
+            List<ScholarshipApplication> applications = AppRepository.List(null, "All");
 
             lblTotalValue.Text = applications.Count.ToString();
             lblApprovedValue.Text = applications.Count(a => a.Status == "Approved").ToString();
@@ -22,9 +23,7 @@ namespace scholarship_Application.Controls
                 .ToString();
 
             lstRecent.Items.Clear();
-            foreach (ScholarshipApplication app in applications
-                .OrderByDescending(a => a.SubmittedAt)
-                .Take(6))
+            foreach (ScholarshipApplication app in applications.Take(6))
             {
                 lstRecent.Items.Add($"{app.FullName} ({app.StudentNumber}) - {app.Display}");
             }

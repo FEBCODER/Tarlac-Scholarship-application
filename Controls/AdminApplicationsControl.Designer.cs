@@ -33,15 +33,19 @@
             btnApprove = new Button();
             pnlSpacerC = new Panel();
             txtRemarks = new TextBox();
-            picAppPhoto = new PictureBox();
             pnlSpacerB = new Panel();
             lblDetail = new Label();
+            picAppPhoto = new PictureBox();
             pnlFilter.SuspendLayout();
             pnlMain.SuspendLayout();
             pnlGridHost.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)grid).BeginInit();
             grpDecision.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)picAppPhoto).BeginInit();
             SuspendLayout();
+            // 
+            // lblHeading
+            // 
             lblHeading.AutoSize = true;
             lblHeading.Dock = DockStyle.Top;
             lblHeading.Font = new Font("Segoe UI Semibold", 13F);
@@ -52,6 +56,9 @@
             lblHeading.Size = new Size(131, 34);
             lblHeading.TabIndex = 0;
             lblHeading.Text = "Applications";
+            // 
+            // pnlFilter
+            // 
             pnlFilter.BackColor = Color.FromArgb(243, 245, 249);
             pnlFilter.Controls.Add(lblShow);
             pnlFilter.Controls.Add(cboFilter);
@@ -62,6 +69,9 @@
             pnlFilter.Name = "pnlFilter";
             pnlFilter.Size = new Size(700, 30);
             pnlFilter.TabIndex = 2;
+            // 
+            // lblShow
+            // 
             lblShow.AutoSize = true;
             lblShow.ForeColor = Color.FromArgb(105, 115, 130);
             lblShow.Location = new Point(5, 9);
@@ -69,6 +79,9 @@
             lblShow.Size = new Size(39, 15);
             lblShow.TabIndex = 1;
             lblShow.Text = "Show:";
+            // 
+            // cboFilter
+            // 
             cboFilter.DropDownStyle = ComboBoxStyle.DropDownList;
             cboFilter.FormattingEnabled = true;
             cboFilter.Items.AddRange(new object[] { "All", "Submitted", "Under Review", "Approved", "Rejected" });
@@ -78,6 +91,9 @@
             cboFilter.Size = new Size(149, 23);
             cboFilter.TabIndex = 0;
             cboFilter.SelectedIndexChanged += cboFilter_SelectedIndexChanged;
+            // 
+            // btnNew
+            // 
             btnNew.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             btnNew.BackColor = Color.FromArgb(23, 93, 186);
             btnNew.Cursor = Cursors.Hand;
@@ -93,6 +109,9 @@
             btnNew.Text = "New application";
             btnNew.UseVisualStyleBackColor = false;
             btnNew.Click += btnNew_Click;
+            // 
+            // pnlMain
+            // 
             pnlMain.BackColor = Color.FromArgb(243, 245, 249);
             pnlMain.ColumnCount = 2;
             pnlMain.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 62F));
@@ -108,6 +127,9 @@
             pnlMain.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
             pnlMain.Size = new Size(700, 356);
             pnlMain.TabIndex = 1;
+            // 
+            // pnlGridHost
+            // 
             pnlGridHost.Controls.Add(grid);
             pnlGridHost.Dock = DockStyle.Fill;
             pnlGridHost.Location = new Point(10, 5);
@@ -116,6 +138,9 @@
             pnlGridHost.Padding = new Padding(1);
             pnlGridHost.Size = new Size(419, 343);
             pnlGridHost.TabIndex = 1;
+            // 
+            // grid
+            // 
             grid.AllowUserToAddRows = false;
             grid.AllowUserToDeleteRows = false;
             grid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
@@ -133,6 +158,9 @@
             grid.TabIndex = 0;
             grid.DataBindingComplete += grid_DataBindingComplete;
             grid.SelectionChanged += grid_SelectionChanged;
+            // 
+            // grpDecision
+            // 
             grpDecision.Controls.Add(lstHistory);
             grpDecision.Controls.Add(lblActivity);
             grpDecision.Controls.Add(pnlSpacerD);
@@ -155,36 +183,48 @@
             grpDecision.TabIndex = 1;
             grpDecision.TabStop = false;
             grpDecision.Text = "Record decision";
+            // 
+            // lstHistory
+            // 
             lstHistory.BorderStyle = BorderStyle.None;
             lstHistory.Dock = DockStyle.Fill;
             lstHistory.IntegralHeight = false;
-            lstHistory.Location = new Point(9, 328);
+            lstHistory.Location = new Point(9, 478);
             lstHistory.Margin = new Padding(3, 2, 3, 2);
             lstHistory.Name = "lstHistory";
-            lstHistory.Size = new Size(237, 7);
+            lstHistory.Size = new Size(237, 0);
             lstHistory.TabIndex = 0;
+            // 
+            // lblActivity
+            // 
             lblActivity.Dock = DockStyle.Top;
             lblActivity.Font = new Font("Segoe UI", 9F);
             lblActivity.ForeColor = Color.FromArgb(105, 115, 130);
-            lblActivity.Location = new Point(9, 308);
+            lblActivity.Location = new Point(9, 458);
             lblActivity.Name = "lblActivity";
             lblActivity.Padding = new Padding(0, 3, 0, 2);
             lblActivity.Size = new Size(237, 20);
             lblActivity.TabIndex = 0;
             lblActivity.Text = "Activity log";
+            // 
+            // pnlSpacerD
+            // 
             pnlSpacerD.Dock = DockStyle.Top;
-            pnlSpacerD.Location = new Point(9, 300);
+            pnlSpacerD.Location = new Point(9, 450);
             pnlSpacerD.Margin = new Padding(3, 2, 3, 2);
             pnlSpacerD.Name = "pnlSpacerD";
             pnlSpacerD.Size = new Size(237, 8);
             pnlSpacerD.TabIndex = 0;
+            // 
+            // btnReject
+            // 
             btnReject.BackColor = Color.FromArgb(199, 56, 56);
             btnReject.Cursor = Cursors.Hand;
             btnReject.Dock = DockStyle.Top;
             btnReject.FlatAppearance.BorderSize = 0;
             btnReject.FlatStyle = FlatStyle.Flat;
             btnReject.ForeColor = Color.White;
-            btnReject.Location = new Point(9, 272);
+            btnReject.Location = new Point(9, 422);
             btnReject.Margin = new Padding(3, 2, 3, 2);
             btnReject.Name = "btnReject";
             btnReject.Size = new Size(237, 28);
@@ -192,13 +232,16 @@
             btnReject.Text = "Reject";
             btnReject.UseVisualStyleBackColor = false;
             btnReject.Click += btnReject_Click;
+            // 
+            // btnUnderReview
+            // 
             btnUnderReview.BackColor = Color.FromArgb(23, 93, 186);
             btnUnderReview.Cursor = Cursors.Hand;
             btnUnderReview.Dock = DockStyle.Top;
             btnUnderReview.FlatAppearance.BorderSize = 0;
             btnUnderReview.FlatStyle = FlatStyle.Flat;
             btnUnderReview.ForeColor = Color.White;
-            btnUnderReview.Location = new Point(9, 246);
+            btnUnderReview.Location = new Point(9, 396);
             btnUnderReview.Margin = new Padding(3, 2, 3, 2);
             btnUnderReview.Name = "btnUnderReview";
             btnUnderReview.Size = new Size(237, 26);
@@ -206,13 +249,16 @@
             btnUnderReview.Text = "Mark as Under Review";
             btnUnderReview.UseVisualStyleBackColor = false;
             btnUnderReview.Click += btnUnderReview_Click;
+            // 
+            // btnApprove
+            // 
             btnApprove.BackColor = Color.FromArgb(28, 132, 74);
             btnApprove.Cursor = Cursors.Hand;
             btnApprove.Dock = DockStyle.Top;
             btnApprove.FlatAppearance.BorderSize = 0;
             btnApprove.FlatStyle = FlatStyle.Flat;
             btnApprove.ForeColor = Color.White;
-            btnApprove.Location = new Point(9, 218);
+            btnApprove.Location = new Point(9, 368);
             btnApprove.Margin = new Padding(3, 2, 3, 2);
             btnApprove.Name = "btnApprove";
             btnApprove.Size = new Size(237, 28);
@@ -220,42 +266,61 @@
             btnApprove.Text = "Approve";
             btnApprove.UseVisualStyleBackColor = false;
             btnApprove.Click += btnApprove_Click;
+            // 
+            // pnlSpacerC
+            // 
             pnlSpacerC.Dock = DockStyle.Top;
-            pnlSpacerC.Location = new Point(9, 212);
+            pnlSpacerC.Location = new Point(9, 362);
             pnlSpacerC.Margin = new Padding(3, 2, 3, 2);
             pnlSpacerC.Name = "pnlSpacerC";
             pnlSpacerC.Size = new Size(237, 6);
             pnlSpacerC.TabIndex = 0;
+            // 
+            // txtRemarks
+            // 
             txtRemarks.Dock = DockStyle.Top;
-            txtRemarks.Location = new Point(9, 162);
+            txtRemarks.Location = new Point(9, 312);
             txtRemarks.Margin = new Padding(3, 2, 3, 2);
             txtRemarks.Multiline = true;
             txtRemarks.Name = "txtRemarks";
             txtRemarks.Size = new Size(237, 50);
             txtRemarks.TabIndex = 0;
+            // 
+            // pnlSpacerB
+            // 
             pnlSpacerB.Dock = DockStyle.Top;
-            pnlSpacerB.Location = new Point(9, 156);
+            pnlSpacerB.Location = new Point(9, 306);
             pnlSpacerB.Margin = new Padding(3, 2, 3, 2);
             pnlSpacerB.Name = "pnlSpacerB";
             pnlSpacerB.Size = new Size(237, 6);
             pnlSpacerB.TabIndex = 0;
+            // 
+            // lblDetail
+            // 
             lblDetail.Dock = DockStyle.Top;
             lblDetail.Font = new Font("Segoe UI", 9.5F);
             lblDetail.ForeColor = Color.FromArgb(50, 55, 65);
-            lblDetail.Location = new Point(9, 28);
+            lblDetail.Location = new Point(9, 178);
             lblDetail.Name = "lblDetail";
             lblDetail.Size = new Size(237, 128);
             lblDetail.TabIndex = 0;
             lblDetail.Text = "Select an application.";
+            // 
+            // picAppPhoto
+            // 
             picAppPhoto.BackColor = Color.White;
             picAppPhoto.BorderStyle = BorderStyle.FixedSingle;
             picAppPhoto.Dock = DockStyle.Top;
             picAppPhoto.Location = new Point(9, 28);
             picAppPhoto.Name = "picAppPhoto";
-            picAppPhoto.SizeMode = PictureBoxSizeMode.Zoom;
             picAppPhoto.Size = new Size(237, 150);
+            picAppPhoto.SizeMode = PictureBoxSizeMode.Zoom;
             picAppPhoto.TabIndex = 0;
+            picAppPhoto.TabStop = false;
             picAppPhoto.Visible = false;
+            // 
+            // AdminApplicationsControl
+            // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(243, 245, 249);
@@ -272,6 +337,7 @@
             ((System.ComponentModel.ISupportInitialize)grid).EndInit();
             grpDecision.ResumeLayout(false);
             grpDecision.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)picAppPhoto).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }

@@ -28,7 +28,23 @@ namespace scholarship_Application.Forms
                 return;
             }
 
-            DashboardBase shell = username.StartsWith("admin", StringComparison.OrdinalIgnoreCase)
+            scholarship_Application.Data.AppUser? user =
+                scholarship_Application.Data.AppRepository.SignIn(username, txtPassword.Text);
+
+            if (user is null)
+            {
+                lblError.Text = "Wrong username or password.";
+                txtPassword.Clear();
+                txtPassword.Focus();
+                return;
+            }
+
+            scholarship_Application.Data.AppSession.Username = user.Username;
+            scholarship_Application.Data.AppSession.FullName = user.FullName;
+            scholarship_Application.Data.AppSession.StudentNumber = user.StudentNumber;
+            scholarship_Application.Data.AppSession.IsAdmin = user.IsAdmin;
+
+            DashboardBase shell = user.IsAdmin
                 ? (DashboardBase)new AdminDashboard(this)
                 : new StudentDashboard(this);
 

@@ -12,7 +12,7 @@ namespace scholarship_Application.Forms
             _login = login;
             RegisterNav(btnDashboard, btnApplications);
 
-            lblUserChip.Text = "Signed in as\nadmin (sample)";
+            lblUserChip.Text = "Signed in as\nadmin";
         }
 
         private void AdminDashboard_Load(object sender, EventArgs e)

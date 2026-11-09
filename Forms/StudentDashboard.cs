@@ -1,4 +1,5 @@
 using scholarship_Application.Controls;
+using scholarship_Application.Data;
 
 namespace scholarship_Application.Forms
 {
@@ -12,7 +13,7 @@ namespace scholarship_Application.Forms
             _login = login;
             RegisterNav(btnDashboard, btnApply, btnMyApplications);
 
-            lblUserChip.Text = "Signed in as\nAna Marisol Reyes";
+            lblUserChip.Text = $"Signed in as\n{AppSession.FullName}";
         }
 
         private void StudentDashboard_Load(object sender, EventArgs e)

@@ -1,4 +1,5 @@
 using System.Windows.Forms;
+using scholarship_Application.Data;
 using scholarship_Application.Models;
 
 namespace scholarship_Application.Controls
@@ -27,11 +28,10 @@ namespace scholarship_Application.Controls
 
         public void RefreshData()
         {
-            lblWelcome.Text = "Welcome, Ana Marisol Reyes!";
+            lblWelcome.Text = $"Welcome, {AppSession.FullName}!";
 
-            var mine = SampleData.Applications
-                .Where(a => a.StudentNumber == SampleData.DemoStudentNumber)
-                .ToList();
+            List<ScholarshipApplication> mine =
+                AppRepository.List(AppSession.StudentNumber, "All");
             lblSubmittedValue.Text = mine.Count(a => a.Status == "Submitted" || a.Status == "Under Review").ToString();
             lblApprovedValue.Text = mine.Count(a => a.Status == "Approved").ToString();
             lblRejectedValue.Text = mine.Count(a => a.Status == "Rejected").ToString();

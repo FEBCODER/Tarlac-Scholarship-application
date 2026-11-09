@@ -1,4 +1,5 @@
 using System.Windows.Forms;
+using scholarship_Application.Data;
 using scholarship_Application.Forms;
 using scholarship_Application.Models;
 
@@ -16,16 +17,10 @@ namespace scholarship_Application.Controls
 
         public void RefreshData()
         {
-            IEnumerable<ScholarshipApplication> source = SampleData.Applications
-                .OrderByDescending(a => a.SubmittedAt);
+            List<ScholarshipApplication> source =
+                AppRepository.List(null, cboFilter.SelectedItem?.ToString() ?? "All");
 
-            string filter = cboFilter.SelectedItem?.ToString() ?? "All";
-            if (filter != "All")
-            {
-                source = source.Where(a => a.Status == filter);
-            }
-
-            grid.DataSource = source.ToList();
+            grid.DataSource = source;
             Ui.TuneColumns(grid);
         }
 
@@ -100,7 +95,7 @@ namespace scholarship_Application.Controls
                 return;
             }
 
-            SampleData.Applications.Add(form.NewApplication);
+            AppRepository.Add(form.NewApplication);
             cboFilter.SelectedIndex = 0;
             RefreshData();
         }
@@ -114,8 +109,8 @@ namespace scholarship_Application.Controls
                 return;
             }
 
-            app.Status = decision;
             app.Remarks = txtRemarks.Text.Trim();
+            AppRepository.SetStatus(app.Id, decision, app.Remarks);
 
             lstHistory.Items.Insert(0,
                 $"{DateTime.Now:MMM d HH:mm} {decision} - {app.FullName} ({app.StudentNumber})");

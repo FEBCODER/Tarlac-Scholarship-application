@@ -1,4 +1,5 @@
 using System.Windows.Forms;
+using scholarship_Application.Data;
 using scholarship_Application.Models;
 
 namespace scholarship_Application.Controls
@@ -11,8 +12,8 @@ namespace scholarship_Application.Controls
 
             cboProgram.Items.AddRange(new object[] { "Merit", "Need-based", "General" });
 
-            txtFullName.Text = "Ana Marisol Reyes";
-            txtStudentNumber.Text = SampleData.DemoStudentNumber;
+            txtFullName.Text = AppSession.FullName;
+            txtStudentNumber.Text = AppSession.StudentNumber;
         }
 
         private void cboProgram_SelectedIndexChanged(object sender, EventArgs e)
@@ -49,8 +50,8 @@ namespace scholarship_Application.Controls
         {
             var application = new ScholarshipApplication
             {
-                StudentNumber = SampleData.DemoStudentNumber,
-                FullName = "Ana Marisol Reyes",
+                StudentNumber = AppSession.StudentNumber,
+                FullName = AppSession.FullName,
                 Email = string.IsNullOrWhiteSpace(txtEmail.Text)
                     ? "ana.reyes@tarlac.gov.ph"
                     : txtEmail.Text.Trim(),
@@ -63,7 +64,7 @@ namespace scholarship_Application.Controls
                 Photo = picPhoto.Image is null ? null : new Bitmap(picPhoto.Image),
             };
 
-            SampleData.Applications.Add(application);
+            AppRepository.Add(application);
             RefreshData();
 
             MessageBox.Show(
@@ -95,10 +96,11 @@ namespace scholarship_Application.Controls
 
         public void RefreshData()
         {
+            List<ScholarshipApplication> mine =
+                AppRepository.List(AppSession.StudentNumber, "All");
+
             lstMine.Items.Clear();
-            foreach (ScholarshipApplication app in SampleData.Applications
-                .Where(a => a.StudentNumber == SampleData.DemoStudentNumber)
-                .OrderByDescending(a => a.SubmittedAt))
+            foreach (ScholarshipApplication app in mine)
             {
                 lstMine.Items.Add(app.Display);
             }

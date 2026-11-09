@@ -45,10 +45,9 @@
             lblPhoto = new Label();
             picPhoto = new PictureBox();
             btnPhoto = new Button();
-            ofdPhoto = new OpenFileDialog();
-            ((System.ComponentModel.ISupportInitialize)picPhoto).BeginInit();
             grpMine = new GroupBox();
             lstMine = new ListBox();
+            ofdPhoto = new OpenFileDialog();
             pnlCenter.SuspendLayout();
             grpDetails.SuspendLayout();
             pnlForm.SuspendLayout();
@@ -57,6 +56,9 @@
             ((System.ComponentModel.ISupportInitialize)picPhoto).BeginInit();
             grpMine.SuspendLayout();
             SuspendLayout();
+            // 
+            // lblHeading
+            // 
             lblHeading.AutoSize = true;
             lblHeading.Dock = DockStyle.Top;
             lblHeading.Font = new Font("Segoe UI Semibold", 13F);
@@ -67,6 +69,9 @@
             lblHeading.Size = new Size(216, 34);
             lblHeading.TabIndex = 0;
             lblHeading.Text = "Apply for a scholarship";
+            // 
+            // pnlCenter
+            // 
             pnlCenter.BackColor = Color.FromArgb(243, 245, 249);
             pnlCenter.ColumnCount = 2;
             pnlCenter.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 62F));
@@ -80,8 +85,11 @@
             pnlCenter.Padding = new Padding(7, 3, 7, 6);
             pnlCenter.RowCount = 1;
             pnlCenter.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            pnlCenter.Size = new Size(700, 386);
+            pnlCenter.Size = new Size(916, 386);
             pnlCenter.TabIndex = 1;
+            // 
+            // grpDetails
+            // 
             grpDetails.Controls.Add(pnlForm);
             grpDetails.Dock = DockStyle.Fill;
             grpDetails.Font = new Font("Segoe UI Semibold", 11F);
@@ -90,10 +98,13 @@
             grpDetails.Margin = new Padding(3, 2, 3, 2);
             grpDetails.Name = "grpDetails";
             grpDetails.Padding = new Padding(9, 8, 9, 8);
-            grpDetails.Size = new Size(419, 373);
+            grpDetails.Size = new Size(553, 373);
             grpDetails.TabIndex = 1;
             grpDetails.TabStop = false;
             grpDetails.Text = "Application details";
+            // 
+            // pnlForm
+            // 
             pnlForm.Controls.Add(lblName);
             pnlForm.Controls.Add(txtFullName);
             pnlForm.Controls.Add(lblStudentNumber);
@@ -119,8 +130,11 @@
             pnlForm.Location = new Point(9, 28);
             pnlForm.Margin = new Padding(3, 2, 3, 2);
             pnlForm.Name = "pnlForm";
-            pnlForm.Size = new Size(401, 337);
+            pnlForm.Size = new Size(535, 337);
             pnlForm.TabIndex = 0;
+            // 
+            // lblName
+            // 
             lblName.AutoSize = true;
             lblName.ForeColor = Color.FromArgb(105, 115, 130);
             lblName.Location = new Point(18, 8);
@@ -128,12 +142,18 @@
             lblName.Size = new Size(50, 20);
             lblName.TabIndex = 0;
             lblName.Text = "Name";
+            // 
+            // txtFullName
+            // 
             txtFullName.Location = new Point(18, 24);
             txtFullName.Margin = new Padding(3, 2, 3, 2);
             txtFullName.Name = "txtFullName";
             txtFullName.ReadOnly = true;
             txtFullName.Size = new Size(263, 27);
             txtFullName.TabIndex = 1;
+            // 
+            // lblStudentNumber
+            // 
             lblStudentNumber.AutoSize = true;
             lblStudentNumber.ForeColor = Color.FromArgb(105, 115, 130);
             lblStudentNumber.Location = new Point(18, 50);
@@ -141,12 +161,18 @@
             lblStudentNumber.Size = new Size(120, 20);
             lblStudentNumber.TabIndex = 2;
             lblStudentNumber.Text = "Student number";
+            // 
+            // txtStudentNumber
+            // 
             txtStudentNumber.Location = new Point(18, 66);
             txtStudentNumber.Margin = new Padding(3, 2, 3, 2);
             txtStudentNumber.Name = "txtStudentNumber";
             txtStudentNumber.ReadOnly = true;
             txtStudentNumber.Size = new Size(263, 27);
             txtStudentNumber.TabIndex = 3;
+            // 
+            // lblEmail
+            // 
             lblEmail.AutoSize = true;
             lblEmail.ForeColor = Color.FromArgb(105, 115, 130);
             lblEmail.Location = new Point(18, 92);
@@ -154,11 +180,17 @@
             lblEmail.Size = new Size(46, 20);
             lblEmail.TabIndex = 4;
             lblEmail.Text = "Email";
+            // 
+            // txtEmail
+            // 
             txtEmail.Location = new Point(18, 108);
             txtEmail.Margin = new Padding(3, 2, 3, 2);
             txtEmail.Name = "txtEmail";
             txtEmail.Size = new Size(263, 27);
             txtEmail.TabIndex = 5;
+            // 
+            // lblProgram
+            // 
             lblProgram.AutoSize = true;
             lblProgram.ForeColor = Color.FromArgb(105, 115, 130);
             lblProgram.Location = new Point(18, 134);
@@ -166,6 +198,9 @@
             lblProgram.Size = new Size(152, 20);
             lblProgram.TabIndex = 6;
             lblProgram.Text = "Scholarship program";
+            // 
+            // cboProgram
+            // 
             cboProgram.DropDownStyle = ComboBoxStyle.DropDownList;
             cboProgram.FormattingEnabled = true;
             cboProgram.Location = new Point(18, 150);
@@ -174,6 +209,9 @@
             cboProgram.Size = new Size(263, 28);
             cboProgram.TabIndex = 7;
             cboProgram.SelectedIndexChanged += cboProgram_SelectedIndexChanged;
+            // 
+            // lblRule
+            // 
             lblRule.AutoSize = true;
             lblRule.ForeColor = Color.FromArgb(105, 115, 130);
             lblRule.Location = new Point(18, 177);
@@ -181,12 +219,18 @@
             lblRule.Size = new Size(103, 20);
             lblRule.TabIndex = 8;
             lblRule.Text = "Eligibility rule";
+            // 
+            // lblHint
+            // 
             lblHint.ForeColor = Color.FromArgb(105, 115, 130);
             lblHint.Location = new Point(18, 194);
             lblHint.Name = "lblHint";
             lblHint.Size = new Size(306, 36);
             lblHint.TabIndex = 9;
             lblHint.Text = "Select a scholarship program to see its eligibility rule.";
+            // 
+            // lblGwa
+            // 
             lblGwa.AutoSize = true;
             lblGwa.ForeColor = Color.FromArgb(105, 115, 130);
             lblGwa.Location = new Point(18, 236);
@@ -194,6 +238,9 @@
             lblGwa.Size = new Size(111, 20);
             lblGwa.TabIndex = 10;
             lblGwa.Text = "GWA (0.0 - 4.0)";
+            // 
+            // nudGwa
+            // 
             nudGwa.DecimalPlaces = 2;
             nudGwa.Increment = new decimal(new int[] { 5, 0, 0, 131072 });
             nudGwa.Location = new Point(18, 252);
@@ -202,6 +249,9 @@
             nudGwa.Name = "nudGwa";
             nudGwa.Size = new Size(105, 27);
             nudGwa.TabIndex = 12;
+            // 
+            // lblIncome
+            // 
             lblIncome.AutoSize = true;
             lblIncome.ForeColor = Color.FromArgb(105, 115, 130);
             lblIncome.Location = new Point(153, 236);
@@ -209,6 +259,9 @@
             lblIncome.Size = new Size(165, 20);
             lblIncome.TabIndex = 11;
             lblIncome.Text = "Household income / yr";
+            // 
+            // nudIncome
+            // 
             nudIncome.Increment = new decimal(new int[] { 10000, 0, 0, 0 });
             nudIncome.Location = new Point(153, 252);
             nudIncome.Margin = new Padding(3, 2, 3, 2);
@@ -216,6 +269,9 @@
             nudIncome.Size = new Size(136, 27);
             nudIncome.TabIndex = 13;
             nudIncome.ThousandsSeparator = true;
+            // 
+            // lblPeso
+            // 
             lblPeso.AutoSize = true;
             lblPeso.ForeColor = Color.FromArgb(105, 115, 130);
             lblPeso.Location = new Point(296, 255);
@@ -223,6 +279,9 @@
             lblPeso.Size = new Size(38, 20);
             lblPeso.TabIndex = 14;
             lblPeso.Text = "PHP";
+            // 
+            // btnSubmit
+            // 
             btnSubmit.BackColor = Color.FromArgb(23, 93, 186);
             btnSubmit.Cursor = Cursors.Hand;
             btnSubmit.FlatAppearance.BorderSize = 0;
@@ -236,6 +295,9 @@
             btnSubmit.Text = "Submit application";
             btnSubmit.UseVisualStyleBackColor = false;
             btnSubmit.Click += btnSubmit_Click;
+            // 
+            // btnClear
+            // 
             btnClear.BackColor = Color.FromArgb(233, 236, 241);
             btnClear.Cursor = Cursors.Hand;
             btnClear.FlatAppearance.BorderSize = 0;
@@ -249,6 +311,9 @@
             btnClear.Text = "Clear";
             btnClear.UseVisualStyleBackColor = false;
             btnClear.Click += btnClear_Click;
+            // 
+            // lblNote
+            // 
             lblNote.AutoSize = true;
             lblNote.Font = new Font("Segoe UI", 8.5F, FontStyle.Italic);
             lblNote.ForeColor = Color.FromArgb(105, 115, 130);
@@ -257,20 +322,30 @@
             lblNote.Size = new Size(393, 15);
             lblNote.TabIndex = 17;
             lblNote.Text = "Applications are kept in memory only and disappear when the app closes.";
+            // 
+            // lblPhoto
+            // 
             lblPhoto.AutoSize = true;
             lblPhoto.ForeColor = Color.FromArgb(105, 115, 130);
             lblPhoto.Location = new Point(340, 6);
             lblPhoto.Name = "lblPhoto";
-            lblPhoto.Size = new Size(98, 20);
+            lblPhoto.Size = new Size(104, 20);
             lblPhoto.TabIndex = 18;
             lblPhoto.Text = "2x2 ID picture";
+            // 
+            // picPhoto
+            // 
             picPhoto.BackColor = Color.White;
             picPhoto.BorderStyle = BorderStyle.FixedSingle;
             picPhoto.Location = new Point(340, 24);
             picPhoto.Name = "picPhoto";
-            picPhoto.SizeMode = PictureBoxSizeMode.Zoom;
             picPhoto.Size = new Size(180, 180);
+            picPhoto.SizeMode = PictureBoxSizeMode.Zoom;
             picPhoto.TabIndex = 19;
+            picPhoto.TabStop = false;
+            // 
+            // btnPhoto
+            // 
             btnPhoto.BackColor = Color.FromArgb(233, 236, 241);
             btnPhoto.Cursor = Cursors.Hand;
             btnPhoto.FlatAppearance.BorderSize = 0;
@@ -283,20 +358,24 @@
             btnPhoto.Text = "Choose photo...";
             btnPhoto.UseVisualStyleBackColor = false;
             btnPhoto.Click += btnPhoto_Click;
-            ofdPhoto.Filter = "Image files (*.jpg, *.png, *.bmp)|*.jpg;*.jpeg;*.png;*.bmp";
-            ofdPhoto.Title = "Choose 2x2 picture";
+            // 
+            // grpMine
+            // 
             grpMine.Controls.Add(lstMine);
             grpMine.Dock = DockStyle.Fill;
             grpMine.Font = new Font("Segoe UI Semibold", 11F);
             grpMine.ForeColor = Color.FromArgb(24, 41, 74);
-            grpMine.Location = new Point(435, 5);
+            grpMine.Location = new Point(569, 5);
             grpMine.Margin = new Padding(3, 2, 3, 2);
             grpMine.Name = "grpMine";
             grpMine.Padding = new Padding(9, 8, 9, 8);
-            grpMine.Size = new Size(255, 373);
+            grpMine.Size = new Size(337, 373);
             grpMine.TabIndex = 2;
             grpMine.TabStop = false;
             grpMine.Text = "My submissions this session";
+            // 
+            // lstMine
+            // 
             lstMine.BorderStyle = BorderStyle.None;
             lstMine.Dock = DockStyle.Fill;
             lstMine.IntegralHeight = false;
@@ -304,8 +383,16 @@
             lstMine.Margin = new Padding(3, 2, 3, 2);
             lstMine.Name = "lstMine";
             lstMine.SelectionMode = SelectionMode.None;
-            lstMine.Size = new Size(237, 337);
+            lstMine.Size = new Size(319, 337);
             lstMine.TabIndex = 0;
+            // 
+            // ofdPhoto
+            // 
+            ofdPhoto.Filter = "Image files (*.jpg, *.png, *.bmp)|*.jpg;*.jpeg;*.png;*.bmp";
+            ofdPhoto.Title = "Choose 2x2 picture";
+            // 
+            // ApplyControl
+            // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(243, 245, 249);
@@ -313,7 +400,7 @@
             Controls.Add(lblHeading);
             Margin = new Padding(3, 2, 3, 2);
             Name = "ApplyControl";
-            Size = new Size(700, 420);
+            Size = new Size(916, 420);
             pnlCenter.ResumeLayout(false);
             grpDetails.ResumeLayout(false);
             pnlForm.ResumeLayout(false);
